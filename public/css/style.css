@@ -1,0 +1,26 @@
+.panel-heading.restaurant{
+    background-image: url('../images/city-restaurant-lunch-outside.jpg');
+    background-size: cover;
+    background-position: center -350px;
+    color: white;
+    font-size: 15pt;
+    padding: 15px 30px;
+    text-shadow: 1px 1px 2px black;
+}
+.modal-header.new-restaurant {
+    background-image: url('../images/pexels-photo-65746.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+.modal-header.new-restaurant-table{
+    background-image: url('../images/wood-light-summer-lunch.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+.grid figure h2{
+    word-spacing:0px !important;
+}

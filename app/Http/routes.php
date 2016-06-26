@@ -18,3 +18,25 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+//Route::get('/restaurants','RestaurantController@restaurants');
+
+//API
+Route::get('/api/{key}/restaurants','RestaurantController@apiRestaurants');
+
+Route::get('/restaurants','RestaurantController@guest_restaurants')->middleware(['guest']);
+//Route::get('/restaurants','RestaurantController@guest_restaurants');
+
+Route::group(['middleware' => ['web']], function(){
+
+
+
+    Route::post('/restaurants','RestaurantController@addRestaurant');
+    Route::get('/restaurants','RestaurantController@restaurants');
+    
+    Route::get('/restaurant/{id}/tables','TableController@restaurantTables');
+    Route::post('/restaurant/{restaurant}/tables','TableController@addTable');
+
+
+
+});
+

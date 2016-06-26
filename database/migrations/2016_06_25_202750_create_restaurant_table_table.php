@@ -14,6 +14,11 @@ class CreateRestaurantTableTable extends Migration
     {
         Schema::create('restaurant_table', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('restaurant_id')->unsigned()->index();
+            $table->string('number',2);
+            $table->integer('max_seats');
+            $table->boolean('avaible');
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }
